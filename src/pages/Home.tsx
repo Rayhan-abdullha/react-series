@@ -84,9 +84,9 @@ const Home = ({ countries, search, setSearch, region, setRegion }: PropsType) =>
                                     className="w-full h-40 object-cover rounded"
                                 />
                                 <h2 className="text-xl font-semibold mt-3">{country.name.common}</h2>
-                                <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-                                <p><strong>Region:</strong> {country.region}</p>
-                                <p><strong>Capital:</strong> {country.capital?.[0] || "N/A"}</p>
+                                <p className="text-md mt-2"><strong className="text-gray-700">Population:</strong> {country.population.toLocaleString()}</p>
+                                <p className="text-md"><strong className="text-gray-700">Region:</strong> {country.region}</p>
+                                <p className="text-md"><strong className="text-gray-700">Capital:</strong> {country.capital?.[0] || "N/A"}</p>
                             </Link>
                         ))}
                     </div>
