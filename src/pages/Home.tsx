@@ -33,7 +33,6 @@ const Home = ({ countries, search, setSearch, region, setRegion }: PropsType) =>
             (region ? country.region === region : true)
     );
 
-    // Pagination Logic
     const indexOfLastCountry = currentPage * countriesPerPage;
     const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
     const currentCountries = filteredCountries.slice(indexOfFirstCountry, indexOfLastCountry);
@@ -43,8 +42,6 @@ const Home = ({ countries, search, setSearch, region, setRegion }: PropsType) =>
     return (
         <div className="min-h-screen bg-gray-50 p-4">
             <h1 className="text-4xl font-bold text-center mb-6">World Explorer</h1>
-
-            {/* Search & Filter */}
             <div className="flex flex-col md:flex-row gap-4 mb-6 justify-center">
                 <input
                     type="text"
@@ -52,14 +49,14 @@ const Home = ({ countries, search, setSearch, region, setRegion }: PropsType) =>
                     className="border border-gray-200 p-3 rounded w-72 shadow-md"
                     onChange={(e) => {
                         setSearch(e.target.value);
-                        setCurrentPage(1); // Reset to first page on search
+                        setCurrentPage(1);
                     }}
                 />
                 <select
                     className="border border-gray-200 p-3 rounded shadow-md"
                     onChange={(e) => {
                         setRegion(e.target.value);
-                        setCurrentPage(1); // Reset to first page on filter change
+                        setCurrentPage(1);
                     }}
                 >
                     <option value="">All Regions</option>
