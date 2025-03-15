@@ -93,8 +93,6 @@ const Home = ({ countries, search, setSearch, region, setRegion }: PropsType) =>
                             </Link>
                         ))}
                     </div>
-
-                    {/* Pagination Controls */}
                     {totalPages > 1 && (
                         <div className="flex justify-center items-center mt-6 gap-4">
                             <button
