@@ -2,5 +2,15 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+.user-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}.user {
+  background-color: rgb(44, 40, 40);
+  border-radius: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid rgb(58, 57, 57);
 }
